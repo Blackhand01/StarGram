@@ -18,20 +18,21 @@ Welcome to the **Hackathon Project** repository! This project was developed as p
 
 ```
 hackathon-project/
-├── data/                  # Project datasets
-├── docs/                  # Sphinx documentation
-│   ├── build/             # Generated documentation (HTML)
-│   └── source/            # Sphinx source files
-├── notebooks/             # Jupyter notebooks for experiments
-├── src/                   # Main source code
-│   └── main.py            # Main Python script
-├── tests/                 # Automated test cases
-│   └── test_main.py       # Example test file
-├── .gitignore             # Ignored files for Git
-├── Makefile               # Automation commands
-├── requirements.txt       # Python dependencies
-├── SETUP.md               # Step-by-step setup instructions
-└── README.md              # Project overview (this file)
+├── data/                     # Project datasets
+│   └── hackathon_project.db  # Il database verrà creato qui
+├── docs/                     # Sphinx documentation
+│   ├── build/                # Generated documentation (HTML)
+│   └── source/               # Sphinx source files
+├── notebooks/                # Jupyter notebooks for experiments
+├── src/                      # Main source code
+│   └── main.py               # Main Python script
+├── tests/                    # Automated test cases
+│   └── test_main.py          # Example test file
+├── .gitignore                # Ignored files for Git
+├── Makefile                  # Automation commands
+├── requirements.txt          # Python dependencies
+├── SETUP.md                  # Step-by-step setup instructions
+└── README.md                 # Project overview (this file)
 ```
 
 ---

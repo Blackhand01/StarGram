@@ -58,6 +58,16 @@ Suggerire modifiche e miglioramenti per aumentare l'engagement su post già pubb
 
 ---
 
+### **3. Altro:**
+
+1. **Analisi Musicale nei Post**:
+   - **Endpoint**: *"GET Music Posts"*.  
+   - **Funzionalità**: 
+     - Analizzare la musica usata nei post più popolari.
+     - Suggerire tracce di tendenza per nuovi contenuti.
+
+---
+
 ### **3. Funzionalità Future (non saranno pronti per l'hackathon)**
 
 1. **Analisi dei Follower**:
@@ -66,25 +76,19 @@ Suggerire modifiche e miglioramenti per aumentare l'engagement su post già pubb
      - Identificare i follower più attivi.
      - Suggerire nuovi utenti da seguire per aumentare le interazioni.
 
-2. **Analisi Musicale nei Post**:
-   - **Endpoint**: *"GET Music Posts"*.  
-   - **Funzionalità**: 
-     - Analizzare la musica usata nei post più popolari.
-     - Suggerire tracce di tendenza per nuovi contenuti.
-
-3. **Analisi delle Trasmissioni in Diretta**:
+2. **Analisi delle Trasmissioni in Diretta**:
    - **Endpoint**: *"GET Live Broadcast Info"* / *"GET Live Broadcast Comments"*.  
    - **Funzionalità**: 
      - Integrare funzionalità di analisi per trasmissioni in diretta.
      - Suggerire orari e argomenti di maggiore interesse.
 
-4. **Analisi dei Prodotti per Account Business**:
+3. **Analisi dei Prodotti per Account Business**:
    - **Endpoint**: *"GET Product Info"*.  
    - **Funzionalità**: 
      - Implementare analisi delle performance dei prodotti nel negozio Instagram.
      - Suggerire miglioramenti per la descrizione o le immagini.
 
-5. **Analisi dei Post Taggati**:
+4. **Analisi dei Post Taggati**:
    - **Endpoint**: *"GET User Tagged Posts"*.  
    - **Funzionalità**: 
      - Identificare i post in cui l'utente è stato taggato.
