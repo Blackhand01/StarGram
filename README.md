@@ -124,5 +124,3 @@ pytest
 - **Stefano Roy Bisignano**
 - **Mirko Di Maggio**
 ```
-
----
