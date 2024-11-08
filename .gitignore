@@ -149,4 +149,5 @@ data/*.db
 
 # Utilities
 BestPractices.md
-utility
+collected_code.txt
+trace_code.py
