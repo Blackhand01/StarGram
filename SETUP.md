@@ -1,12 +1,12 @@
-# Hackathon Project
+# Hackathon Project - Setup Instructions
 
-This repository contains a Python-based project configured for hackathon development. It includes a virtual environment, documentation generation with Sphinx, automated testing, and a structured setup for development and documentation.
+This document contains step-by-step instructions to replicate the project setup on any system. It includes details on requirements, commands, and structure for easy initialization and use.
 
 ---
 
 ## **Requirements**
 
-To replicate this configuration, you need the following tools:
+To set up and run this project, you need the following tools:
 
 - **Python**: Version 3.8 or higher
 - **pip**: Python package manager
@@ -18,7 +18,7 @@ To replicate this configuration, you need the following tools:
 
 ## **Project Structure**
 
-The repository is organized as follows:
+The project structure is organized as follows:
 ```
 hackathon-project/
 ├── .pytest_cache/         # Cache for pytest
@@ -34,13 +34,13 @@ hackathon-project/
 │   └── test_main.py       # Example test file
 ├── .gitignore             # File to exclude unnecessary files/directories from version control
 ├── Makefile               # Automated commands
-├── README.md              # This file
+├── README.md              # General project overview
 └── requirements.txt       # Python dependencies
 ```
 
 ---
 
-## **Setup Instructions**
+## **Setup Steps**
 
 ### **1. Clone the Repository**
 
@@ -52,74 +52,71 @@ cd hackathon-project
 
 ### **2. Initialize the Virtual Environment**
 
-Run the following command to set up the virtual environment:
+Run the following command to set up the virtual environment and install dependencies:
 ```bash
 make init
 ```
-This will create a virtual environment in the `.venv` directory and install dependencies listed in `requirements.txt`.
+This will create a virtual environment in the `.venv` directory and install dependencies from `requirements.txt`.
 
 ### **3. Generate Documentation**
 
-To generate the HTML documentation, use:
+To generate the HTML documentation using Sphinx:
 ```bash
 make docs
 ```
-The generated HTML files will be available in `docs/build/html`. You can open the main file with:
+The generated HTML files will be located in `docs/build/html`. Open the main file in your browser with:
 ```bash
 make open-docs
 ```
 
 ### **4. Run Tests**
 
-Run the automated tests with:
+Run automated tests to ensure everything works as expected:
 ```bash
 make test
 ```
 
 ### **5. Run the Project**
 
-Run the main script of the project:
+Execute the main script to start the project:
 ```bash
 make run
 ```
 
 ### **6. Cleaning Up**
 
-- **Soft Clean** (removes temporary files, caches, and Sphinx build artifacts):
+- **Soft Clean**: Removes temporary files, caches, and Sphinx build artifacts:
   ```bash
   make clean
   ```
-- **Hard Clean** (removes everything, including the virtual environment):
+
+- **Hard Clean**: Removes everything, including the virtual environment:
   ```bash
   make clean-forced
   ```
 
 ---
 
-## **Dependencies**
+## **Updating Dependencies**
 
-Dependencies are managed in the `requirements.txt` file. To update the list of currently installed dependencies, use:
+If you install new Python packages and want to update `requirements.txt`, run:
 ```bash
 make update-reqs
-```
-
-The current required libraries include:
-```
-sphinx
-pytest
 ```
 
 ---
 
 ## **Notes**
 
-- Documentation is built using **Sphinx**. The source files are located in `docs/source/`.
-- Tests are defined in the `tests/` directory and can be extended based on the project's needs.
-- If you encounter any issues, ensure Python and the required tools are installed correctly.
+- **Documentation**: Built with Sphinx, located in `docs/source/`. Regenerate it with `make docs`.
+- **Tests**: Stored in the `tests/` directory and extendable for new features.
+- **Virtual Environment**: Managed locally in `.venv`, ensuring project isolation.
 
 ---
 
-## **Contributors**
+## **Contact**
 
-- **Stefano Roy Bisignano**
-- **Mirko Di Maggio**
+For issues or contributions, contact:
+
+- **Stefano Roy Bisignano**: bisiwork01@gmail.com
+- **Mirko Di Maggio**: mirko27.mdm@gmail.com
