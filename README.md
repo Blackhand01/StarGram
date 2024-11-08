@@ -126,10 +126,3 @@ pytest
 ```
 
 ---
-
-### **How It Works**
-1. Save this file as `README.md` in your repository root.
-2. Anyone cloning the repository can follow the instructions to set up and run the project.
-3. The structure, dependencies, and `make` commands are documented for complete reproducibility on any machine.
-
-Let me know if you need additional customizations or further explanations! 🚀
