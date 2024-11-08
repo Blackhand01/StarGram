@@ -1,10 +1,3 @@
-Here is the **README.md** file in English, designed to help replicate your repository on another system:
-
----
-
-### **README.md**
-
-```markdown
 # Hackathon Project
 
 This repository contains a Python-based project configured for hackathon development. It includes a virtual environment, documentation generation with Sphinx, automated testing, and a structured setup for development and documentation.
