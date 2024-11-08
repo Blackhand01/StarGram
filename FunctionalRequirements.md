@@ -5,11 +5,11 @@
 ## 1. Introduzione
 
 ### 1.1 Scopo
-L'applicazione mira a supportare creator e marketer nella creazione di contenuti ottimizzati per Instagram, combinando l'analisi dei contenuti precedenti dell'utente con i trend attuali rilevati su Instagram. Utilizzando le capacità multimodali e predittive dell'API Gemini, l'app suggerirà post, hashtag e strategie che massimizzano l'engagement.
+L'applicazione mira a supportare creator e marketer nella creazione di contenuti ottimizzati per Instagram, combinando l'analisi dei contenuti precedenti dell'utente con i trend attuali rilevati su Instagram. Utilizzando le capacità multimodali e predittive dell'API Gemini e i dati pubblici raccolti tramite InstagAPI, l'app suggerirà post, hashtag e strategie che massimizzano l'engagement.
 
 ### 1.2 Obiettivi
 - Fornire suggerimenti basati sui dati storici degli account dell'utente.
-- Integrare trend attuali di hashtag e argomenti popolari.
+- Integrare trend attuali di hashtag e argomenti popolari tramite InstagAPI.
 - Automatizzare il processo di generazione di idee per post, immagini e copy.
 - Presentare insight chiari e utili tramite un'interfaccia intuitiva.
 
@@ -26,9 +26,14 @@ L'applicazione mira a supportare creator e marketer nella creazione di contenuti
 - **Integrazione con Instagram Graph API**:
   - Recupero di dati sui contenuti pubblicati dall'utente.
   - Analisi delle metriche di performance (like, commenti, impression, reach).
+- **Integrazione con InstagAPI**:
+  - Recupero di post pubblici di account rilevanti.
+  - Analisi dei trend attuali su Instagram (hashtag e argomenti popolari).
+  - Rilevamento delle performance di post di altri utenti (like, commenti).
+  - Monitoraggio dei commenti pubblici per analisi del sentiment.
 - **Analisi dei Trend**:
-  - Rilevamento dei trend attuali su Instagram (hashtag, argomenti popolari).
-  - Accesso limitato a post pubblici correlati a un hashtag.
+  - Rilevamento e confronto di hashtag e argomenti popolari.
+  - Identificazione dei post più performanti associati a un determinato hashtag.
 - **Suggerimenti per Nuovi Contenuti**:
   - Generazione di idee basate sui dati storici dell’utente.
   - Raccomandazione di hashtag e copy per i post.
@@ -60,6 +65,7 @@ L'applicazione mira a supportare creator e marketer nella creazione di contenuti
 ### 3.2 Sicurezza
 - Autenticazione OAuth 2.0 per accedere ai dati Instagram.
 - Memorizzazione sicura dei token di accesso.
+- Protezione delle chiavi API di InstagAPI.
 
 ### 3.3 Scalabilità
 - Supporto a più utenti simultaneamente senza degrado delle prestazioni.
@@ -83,8 +89,8 @@ L'applicazione mira a supportare creator e marketer nella creazione di contenuti
 
 ### 4.2 API e Servizi
 - **Instagram Graph API** per l’accesso ai dati dell’account utente.
+- **InstagAPI** per il recupero di dati pubblici di altri utenti e trend.
 - **Gemini API** per l'analisi multimodale e la generazione di suggerimenti.
-- Servizi esterni per trend (opzionale, es. Google Trends).
 
 ### 4.3 Hosting
 - Cloud Provider (AWS, GCP, Azure) per scalabilità e affidabilità.
@@ -94,9 +100,9 @@ L'applicazione mira a supportare creator e marketer nella creazione di contenuti
 ## 5. Requisiti di Gestione
 
 ### 5.1 Iterazioni dello Sviluppo
-- **Fase 1**: Raccolta dati e analisi contenuti storici.
-- **Fase 2**: Integrazione dei trend e API Gemini.
-- **Fase 3**: Generazione di suggerimenti e interfaccia utente.
+- **Fase 1**: Raccolta dati e analisi contenuti storici tramite Instagram Graph API.
+- **Fase 2**: Integrazione dei trend e dati pubblici tramite InstagAPI.
+- **Fase 3**: Generazione di suggerimenti tramite API Gemini.
 - **Fase 4**: Testing, ottimizzazione e rilascio della demo.
 
 ### 5.2 Monitoraggio
@@ -106,10 +112,14 @@ L'applicazione mira a supportare creator e marketer nella creazione di contenuti
 ---
 
 ## 6. Limitazioni
-- Limitazioni nelle API di Meta: impossibilità di accedere ai dati completi degli hashtag o di utenti non collegati.
-- Dipendenza dai limiti di utilizzo delle API Gemini.
+- **Limiti API di Meta**:
+  - Impossibilità di accedere ai dati completi degli hashtag o di utenti non collegati.
+- **Limiti API di InstagAPI**:
+  - 50 richieste nella versione gratuita, necessarie per una demo limitata.
+- **Dipendenza dalle API Gemini**:
+  - Analisi predittiva e multimodale basata sui limiti e sulla disponibilità del servizio.
 
 ---
 
 ## 7. Conclusioni
-Questo documento definisce i requisiti per sviluppare un'applicazione innovativa che combina analisi di Instagram con le capacità avanzate dell'API Gemini. L'obiettivo è creare uno strumento unico per migliorare l'efficacia dei contenuti social media.
+Questo documento definisce i requisiti per sviluppare un'applicazione innovativa che combina analisi di Instagram con le capacità avanzate dell'API Gemini e InstagAPI. L'obiettivo è creare uno strumento unico per migliorare l'efficacia dei contenuti social media.
