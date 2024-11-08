@@ -57,12 +57,24 @@ apidoc:
 
 # Genera documentazione con Sphinx 	usa "sphinx-build -b html docs/source docs/build/html" se non funziona
 # assicurati di avere sphinx in requirements.txt
+.PHONY: docs
 docs:
+	@echo "Generazione documentazione HTML..."
 	$(SPHINXBUILD) -b html $(SOURCEDIR) $(BUILDDIR)/html
+
 
 # Apri la documentazione HTML nel browser
 open-docs:
 	cd $(BUILDDIR)/html && open index.html
+
+update-docs:
+	@echo "Pulizia della build..."
+	rm -rf $(BUILDDIR)
+	@echo "Generazione file .rst con sphinx-apidoc..."
+	$(SPHINXAPIDOC) -o $(SOURCEDIR) ./src
+	@echo "Rigenerazione documentazione HTML..."
+	$(SPHINXBUILD) -b html $(SOURCEDIR) $(BUILDDIR)/html
+	@echo "Documentazione aggiornata!"
 
 # Esegui l'applicazione principale
 run:
