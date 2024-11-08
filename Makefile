@@ -55,7 +55,8 @@ clean-forced:
 apidoc:
 	$(SPHINXAPIDOC) -o $(SOURCEDIR) ./src
 
-# Genera documentazione con Sphinx
+# Genera documentazione con Sphinx 	usa "sphinx-build -b html docs/source docs/build/html" se non funziona
+# assicurati di avere sphinx in requirements.txt
 docs:
 	$(SPHINXBUILD) -b html $(SOURCEDIR) $(BUILDDIR)/html
 
