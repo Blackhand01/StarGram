@@ -13,16 +13,20 @@ help:
 	@echo "  make activate       - Mostra il comando per attivare l'ambiente virtuale."
 	@echo "  make deactivate     - Mostra il comando per disattivare l'ambiente virtuale."
 	@echo "  make update-reqs    - Aggiorna il file requirements.txt con le librerie attualmente installate."
+	@echo "  make install-reqs   - Reinstalla le dipendenze dal file requirements.txt."
 	@echo "  make clean          - Rimuove file temporanei, cache e build di Sphinx (soft clean)."
 	@echo "  make clean-forced   - Rimuove tutto, incluso l'ambiente virtuale (hard clean)."
 	@echo "  make test           - Esegue i test definiti nella directory tests/ usando pytest."
 	@echo "  make apidoc         - Genera automaticamente file .rst per la documentazione dei moduli Python."
 	@echo "  make docs           - Genera la documentazione in formato HTML nella directory docs/build/html."
 	@echo "  make open-docs      - Apre la documentazione HTML generata nel browser (solo su macOS)."
+	@echo "  make update-docs    - Rigenera la documentazione dopo aver pulito la build."
 	@echo "  make run            - Esegue il file principale src/main.py."
 	@echo "  make create-db      - Crea il database e le tabelle necessarie."
 	@echo "  make destroy-db     - Elimina il file del database."
+	@echo "  make trace          - Raccoglie il codice dai file del progetto."
 	@echo ""
+
 
 # Inizializza l'ambiente virtuale e installa dipendenze
 init:
@@ -96,9 +100,9 @@ destroy-db:
 	@echo "Eliminazione del database..."
 	rm -f data/hackathon_project.db
 	@if [ ! -f data/hackathon_project.db ]; then \
-		echo "Database eliminato con successo!"; \
+	echo "Database eliminato con successo!"; \
 	else \
-		echo "Errore: impossibile eliminare il database."; \
+	echo "Errore: impossibile eliminare il database."; \
 	fi
 
 # Raccogli il codice
