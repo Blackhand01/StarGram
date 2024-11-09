@@ -98,8 +98,8 @@ create-db:
 # Elimina il database
 destroy-db:
 	@echo "Eliminazione del database..."
-	rm -f data/hackathon_project.db
-	@if [ ! -f data/hackathon_project.db ]; then \
+	rm -f data/stargram.db
+	@if [ ! -f data/stargram.db ]; then \
 	echo "Database eliminato con successo!"; \
 	else \
 	echo "Errore: impossibile eliminare il database."; \

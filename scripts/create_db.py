@@ -3,7 +3,7 @@ import os
 
 # Percorso del database
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "data", "hackathon_project.db")
+DB_PATH = os.path.join(BASE_DIR, "data", "stargram.db")
 
 def create_tables():
     """
