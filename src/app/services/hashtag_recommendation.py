@@ -38,7 +38,7 @@ def suggest_hashtags_and_calculate_engagement(image_path, user_id):
         return
 
     # Rimuove eventuali spazi o caratteri extra dagli hashtag
-    suggested_hashtags = [hashtag.strip("#").strip() for hashtag in suggested_hashtags]
+    suggested_hashtags = ["#" + hashtag.strip("#").strip() for hashtag in suggested_hashtags]
     print(f"Hashtag suggeriti dall'immagine: {suggested_hashtags}")
 
     print("\n2. Recupero degli hashtag in tendenza...")
@@ -48,15 +48,15 @@ def suggest_hashtags_and_calculate_engagement(image_path, user_id):
         hashtag_id = fetch_hashtag_id(hashtag)
         if hashtag_id:
             print(f"ID trovato per '{hashtag}': {hashtag_id}")
-            posts = fetch_posts_for_hashtag(hashtag_id)
-            all_posts.extend(posts)
+            # posts = fetch_posts_for_hashtag(hashtag_id)
+            # all_posts.extend(posts)
         else:
             print(f"Nessun ID trovato per l'hashtag '{hashtag}'.")
 
-    if not all_posts:
-        print("Nessun post trovato per gli hashtag suggeriti.")
-        return
+    # if not all_posts:
+    #     print("Nessun post trovato per gli hashtag suggeriti.")
+    #     return
 
-    print("\n3. Calcolo della media pesata delle interazioni...")
-    weighted_score = calculate_weighted_interaction(all_posts)
-    print(f"Media pesata delle interazioni: {weighted_score}")
+    # print("\n3. Calcolo della media pesata delle interazioni...")
+    # weighted_score = calculate_weighted_interaction(all_posts)
+    # print(f"Media pesata delle interazioni: {weighted_score}")

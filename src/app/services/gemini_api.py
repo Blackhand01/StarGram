@@ -15,7 +15,7 @@ def configure_gemini_api():
     genai.configure(api_key=api_key)
 
 
-def analyze_image(image_path, number=4):
+def analyze_image(image_path, number=1):
     """
     Analizza un'immagine con l'API Gemini e restituisce fino a `number` hashtag rilevanti.
     """
