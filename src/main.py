@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
-from utils.api_client import fetch_instagram_user_data
+from utils.api_client import fetch_instagram_user_data, fetch_instagram_user_posts
 
 def configure_gemini_api():
     """
@@ -68,18 +68,27 @@ def main():
     try:
         load_dotenv()
 
-        # Configura l'API Instagram
+        # Configurazione API Instagram
         configure_instagram_api()
         print("API Instagram configurata correttamente.")
 
-        # Recupera i dati dell'utente
+        # Recupera dati utente
         user_id = os.getenv("INSTAGRAM_USER_ID")
         if not user_id:
-            raise ValueError("ID utente Instagram non trovato! Verifica il file .env.")
+            raise ValueError("INSTAGRAM_USER_ID non trovato! Aggiungilo al file .env.")
         
-        print(f"\nRecupero dati per l'utente Instagram con ID: {user_id}")
-        user_data = fetch_instagram_user_data(user_id)
-        print(f"Dati utente: {user_data}")
+        print(f"\nRecupero post per l'utente Instagram con ID: {user_id}")
+        posts = fetch_instagram_user_posts(user_id)
+        
+        if posts:
+            print(f"Trovati {len(posts)} post:")
+            for post in posts:
+                print(f"- ID: {post['id']}, Tipo: {post['media_type']}, Data: {post['timestamp']}")
+                print(f"  URL: {post.get('media_url') or post.get('thumbnail_url')}")
+                if 'caption' in post:
+                    print(f"  Caption: {post['caption']}")
+        else:
+            print("Nessun post trovato per l'utente specificato.")
 
     except Exception as e:
         print(f"Errore: {e}")
