@@ -1,4 +1,4 @@
-# Hackathon Project - Setup Instructions
+# StarGram - Setup Instructions
 
 This document contains step-by-step instructions to replicate the project setup on any system. It includes details on requirements, commands, and structure for easy initialization and use.
 

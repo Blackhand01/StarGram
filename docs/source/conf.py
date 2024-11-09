@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Hackathon Project'
+project = 'StarGram'
 copyright = '2024, Stefano Roy Bisignano & Mirko Di Maggio'
 author = 'Stefano Roy Bisignano & Mirko Di Maggio'
 release = '0.1'
