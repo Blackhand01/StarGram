@@ -49,3 +49,22 @@ def test_fetch_instagram_user_posts(mock_get):
     assert posts[0]["media_type"] == "IMAGE"
     assert posts[0]["media_url"] == "https://example.com/photo.jpg"
     assert posts[0]["timestamp"] == "2024-11-08T10:00:00Z"
+
+
+@patch("requests.get")
+def test_fetch_trending_hashtags(mock_get):
+    mock_get.return_value.status_code = 200
+    mock_get.return_value.json.return_value = {
+        "data": [
+            {"id": "17843876082292306", "name": "#travel"},
+            {"id": "17843876082292307", "name": "#adventure"}
+        ]
+    }
+
+    themes = ["travel", "adventure"]
+    location = "Italy"
+    hashtags = fetch_trending_hashtags(themes, location)
+
+    assert len(hashtags) == 2
+    assert hashtags[0]["name"] == "#travel"
+    assert hashtags[1]["name"] == "#adventure"
