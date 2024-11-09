@@ -79,3 +79,7 @@ update-docs:
 # Esegui l'applicazione principale
 run:
 	python src/main.py
+
+# Raccogli il codice
+trace:
+	python utility/trace_code.py
