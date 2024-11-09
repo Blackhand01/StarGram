@@ -19,3 +19,33 @@ def fetch_instagram_user_data(user_id):
         return response.json()
     else:
         raise ValueError(f"Errore durante il recupero dei dati Instagram: {response.status_code}, {response.text}")
+
+
+
+def fetch_instagram_user_posts(user_id):
+    """
+    Recupera i post di un utente Instagram utilizzando l'API Instagram.
+    
+    Args:
+        user_id (str): L'ID utente di Instagram.
+
+    Returns:
+        list: Una lista di post dell'utente.
+    """
+    api_key = os.getenv("INSTAGRAM_API_KEY")
+    if not api_key:
+        raise ValueError("Chiave INSTAGRAM_API_KEY non trovata! Assicurati che .env contenga INSTAGRAM_API_KEY.")
+    
+    url = f"https://graph.instagram.com/v17.0/{user_id}/media"
+    params = {
+        "fields": "id,caption,media_type,media_url,thumbnail_url,timestamp",
+        "access_token": api_key
+    }
+    
+    try:
+        response = requests.get(url, params=params)
+        response.raise_for_status()
+        data = response.json()
+        return data.get("data", [])
+    except requests.exceptions.RequestException as e:
+        raise RuntimeError(f"Errore durante il recupero dei post Instagram: {e}")
