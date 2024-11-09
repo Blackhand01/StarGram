@@ -74,3 +74,16 @@ def test_analyze_image_with_gemini(mock_generative_model):
 
     assert len(hashtags) == 3
     assert hashtags == ["#travel", "#adventure", "#sunset"]
+
+@patch("google.generativeai.GenerativeModel")
+def test_analyze_image_with_gemini(mock_generative_model):
+    mock_instance = MagicMock()
+    # Simula una risposta JSON corretta
+    mock_instance.generate_content.return_value = MagicMock(text='["travel", "adventure", "sunset"]')
+    mock_generative_model.return_value = mock_instance
+
+    image_path = "data/prova.jpeg"
+    hashtags = analyze_image(image_path)
+
+    assert len(hashtags) == 3
+    assert hashtags == ["travel", "adventure", "sunset"]
