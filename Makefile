@@ -20,6 +20,8 @@ help:
 	@echo "  make docs           - Genera la documentazione in formato HTML nella directory docs/build/html."
 	@echo "  make open-docs      - Apre la documentazione HTML generata nel browser (solo su macOS)."
 	@echo "  make run            - Esegue il file principale src/main.py."
+	@echo "  make create-db      - Crea il database e le tabelle necessarie."
+	@echo "  make destroy-db     - Elimina il file del database."
 	@echo ""
 
 # Inizializza l'ambiente virtuale e installa dipendenze
@@ -79,6 +81,21 @@ update-docs:
 # Esegui l'applicazione principale
 run:
 	python src/main.py
+
+# Crea il database
+create-db:
+	@echo "Creazione del database..."
+	python scripts/create_db.py
+	
+# Elimina il database
+destroy-db:
+	@echo "Eliminazione del database..."
+	rm -f data/hackathon_project.db
+	@if [ ! -f data/hackathon_project.db ]; then \
+		echo "Database eliminato con successo!"; \
+	else \
+		echo "Errore: impossibile eliminare il database."; \
+	fi
 
 # Raccogli il codice
 trace:
