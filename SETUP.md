@@ -20,7 +20,7 @@ To set up and run this project, you need the following tools:
 
 The project structure is organized as follows:
 ```
-hackathon-project/
+StarGram/
 ├── .pytest_cache/         # Cache for pytest
 ├── .venv/                 # Virtual environment (not included in version control)
 ├── data/                  # Project datasets
@@ -47,7 +47,7 @@ hackathon-project/
 Clone this repository to your local machine:
 ```bash
 git clone <REPOSITORY_URL>
-cd hackathon-project
+cd StarGram
 ```
 
 ### **2. Initialize the Virtual Environment**

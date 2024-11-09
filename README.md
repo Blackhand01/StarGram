@@ -17,7 +17,7 @@ Welcome to the **StarGram** repository! This project was developed as part of an
 ## **Project Structure**
 
 ```
-hackathon-project/
+StarGram/
 ├── data/                     # Project datasets
 │   └── hackathon_project.db  # Il database verrà creato qui
 ├── docs/                     # Sphinx documentation
