@@ -1,6 +1,6 @@
-# Hackathon Project
+# StarGram
 
-Welcome to the **Hackathon Project** repository! This project was developed as part of an online hackathon to showcase innovative solutions in Generative AI and Machine Learning. The repository includes configurations for development, testing, and documentation, ensuring a streamlined workflow for contributors and collaborators.
+Welcome to the **StarGram** repository! This project was developed as part of an online hackathon to showcase innovative solutions in Generative AI and Machine Learning. The repository includes configurations for development, testing, and documentation, ensuring a streamlined workflow for contributors and collaborators.
 
 ---
 
