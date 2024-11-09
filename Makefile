@@ -45,6 +45,10 @@ test:
 update-reqs:
 	pip freeze > requirements.txt
 
+# Reinstalla le dipendenze dal file requirements.txt
+install-reqs:
+	pip install -r requirements.txt
+
 # Pulisci file temporanei (soft clean)
 clean:
 	rm -rf __pycache__ *.pyc *.pyo .ipynb_checkpoints $(BUILDDIR)
