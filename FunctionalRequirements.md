@@ -1,194 +1,194 @@
-# Documento dei Requisiti - **Strumento di Analisi e Ottimizzazione Instagram**
+# Requirements Document - **Instagram Analysis and Optimization Tool**
 
-## **Scopo**
-Lo scopo del progetto è sviluppare un'applicazione che aiuti utenti di Instagram a far crescere la propria presenza online ottimizzando i post e fornendo analisi approfondite delle performance. Grazie all'integrazione delle API Gemini e InstagAPI, l'app offrirà suggerimenti personalizzati per migliorare la visibilità e le interazioni, analizzando i trend della comunità e del mercato globale.
-
----
-
-## **Stakeholder**
-1. **Utenti Instagram**:
-   - Creator di contenuti, influencer e utenti che desiderano ottimizzare la loro presenza su Instagram.
-2. **Marketer**:
-   - Professionisti che utilizzano Instagram per promuovere brand, prodotti o servizi.
-3. **Sviluppatori**:
-   - Team tecnico che utilizzerà le API Gemini e InstagAPI per implementare le funzionalità.
-4. **Gestori di community**:
-   - Figure interessate a massimizzare l'engagement della propria audience.
+## **Purpose**
+The purpose of this project is to develop an application that helps Instagram users grow their online presence by optimizing posts and providing in-depth performance analysis. Through the integration of Gemini API and InstagAPI, the app will offer personalized suggestions to improve visibility and engagement by analyzing community and global market trends.
 
 ---
 
-## **Requisiti Funzionali**
-
-### **1. Suggerimenti per Nuovi Post**
-Fornire consigli utili per creare nuovi post che ottimizzino visibilità e interazioni.
-1. **Suggerimenti sugli Hashtag**:
-   - Identificare hashtag efficaci basati sui trend locali e globali (utilizzando l'endpoint *"GET Search Hashtag"*).
-
-2. **Orari e Giorni di Pubblicazione**:
-   - Suggerire i momenti migliori per pubblicare basandosi sull'attività dei follower e sulle performance storiche dei post.
-
-3. **Contenuti Migliori**:
-   - Analizzare i trend locali e globali per consigliare:
-     - Tipologie di contenuti popolari (es. immagini, video, storie).
-     - Temi rilevanti nella posizione o comunità dell'utente (endpoint *"GET Location Posts"*).
-
-4. **Generazione di Descrizioni**:
-   - Creare descrizioni personalizzate in base a:
-     - Comportamenti e interessi dei follower (endpoint *"GET Similar Users"*).
-     - Sentiment e stile adatti tramite l'API Gemini.
+## **Stakeholders**
+1. **Instagram Users**:
+   - Content creators, influencers, and users aiming to optimize their Instagram presence.
+2. **Marketers**:
+   - Professionals using Instagram to promote brands, products, or services.
+3. **Developers**:
+   - Technical team leveraging Gemini and InstagAPI to implement functionalities.
+4. **Community Managers**:
+   - Individuals seeking to maximize audience engagement.
 
 ---
 
-### **2. Ottimizzazione di Post Esistenti**
-Suggerire modifiche e miglioramenti per aumentare l'engagement su post già pubblicati.
-1. **Analisi delle Performance**:
-   - Analizzare metriche chiave per post esistenti (utilizzando l'endpoint *"GET Post Detail"*):
-     - Numero di like, commenti, visualizzazioni, repost e condivisioni.
-   - Classificare i contenuti in base alle performance migliori e peggiori.
+## **Functional Requirements**
 
-2. **Confronto con Post Simili**:
-   - Confrontare il post esistente con:
-     - Post simili che hanno ottenuto maggiore engagement.
-     - Post pubblicati nella stessa posizione (endpoint *"GET Location Posts"*).
+### **1. Suggestions for New Posts**
+Provide useful advice to create new posts that optimize visibility and engagement.
+1. **Hashtag Suggestions**:
+   - Identify effective hashtags based on local and global trends (using the *"GET Search Hashtag"* endpoint).
 
-3. **Suggerimenti di Miglioramento**:
-   - Proporre modifiche basate su:
-     - Miglior utilizzo di hashtag e descrizioni.
-     - Ottimizzazione di immagini/video tramite l'analisi predittiva dell'API Gemini.
+2. **Optimal Posting Times**:
+   - Suggest the best times to post based on follower activity and historical post performance.
+
+3. **Best Content Recommendations**:
+   - Analyze local and global trends to recommend:
+     - Popular content types (e.g., images, videos, stories).
+     - Relevant themes based on the user's location or community (using the *"GET Location Posts"* endpoint).
+
+4. **Caption Generation**:
+   - Generate personalized captions based on:
+     - Followers’ behaviors and interests (using the *"GET Similar Users"* endpoint).
+     - Suitable sentiment and style via Gemini API.
 
 ---
 
-### **3. Altro:**
+### **2. Optimization of Existing Posts**
+Provide suggestions for improving and enhancing engagement on already published posts.
+1. **Performance Analysis**:
+   - Analyze key metrics for existing posts (using the *"GET Post Detail"* endpoint):
+     - Number of likes, comments, views, reposts, and shares.
+   - Classify content based on best and worst performance.
 
-1. **Analisi Musicale nei Post**:
+2. **Comparison with Similar Posts**:
+   - Compare the existing post with:
+     - Similar posts with higher engagement.
+     - Posts published in the same location (using the *"GET Location Posts"* endpoint).
+
+3. **Improvement Suggestions**:
+   - Propose changes based on:
+     - Better use of hashtags and captions.
+     - Optimization of images/videos through predictive analysis from Gemini API.
+
+---
+
+### **3. Additional Features**
+
+1. **Music Analysis in Posts**:
    - **Endpoint**: *"GET Music Posts"*.  
-   - **Funzionalità**: 
-     - Analizzare la musica usata nei post più popolari.
-     - Suggerire tracce di tendenza per nuovi contenuti.
+   - **Functionality**:
+     - Analyze music used in the most popular posts.
+     - Suggest trending tracks for new content.
 
 ---
 
-### **3. Funzionalità Future (non saranno pronti per l'hackathon)**
+### **4. Future Features (not ready for the hackathon)**
 
-1. **Analisi dei Follower**:
+1. **Follower Analysis**:
    - **Endpoint**: *"GET User Followers"* / *"GET User Following"*.  
-   - **Funzionalità**: 
-     - Identificare i follower più attivi.
-     - Suggerire nuovi utenti da seguire per aumentare le interazioni.
+   - **Functionality**:
+     - Identify the most active followers.
+     - Suggest new users to follow to increase interactions.
 
-2. **Analisi delle Trasmissioni in Diretta**:
+2. **Live Broadcast Analysis**:
    - **Endpoint**: *"GET Live Broadcast Info"* / *"GET Live Broadcast Comments"*.  
-   - **Funzionalità**: 
-     - Integrare funzionalità di analisi per trasmissioni in diretta.
-     - Suggerire orari e argomenti di maggiore interesse.
+   - **Functionality**:
+     - Integrate analysis features for live broadcasts.
+     - Suggest optimal times and topics of interest.
 
-3. **Analisi dei Prodotti per Account Business**:
+3. **Product Analysis for Business Accounts**:
    - **Endpoint**: *"GET Product Info"*.  
-   - **Funzionalità**: 
-     - Implementare analisi delle performance dei prodotti nel negozio Instagram.
-     - Suggerire miglioramenti per la descrizione o le immagini.
+   - **Functionality**:
+     - Analyze product performance in the Instagram shop.
+     - Suggest improvements for descriptions or images.
 
-4. **Analisi dei Post Taggati**:
+4. **Tagged Post Analysis**:
    - **Endpoint**: *"GET User Tagged Posts"*.  
-   - **Funzionalità**: 
-     - Identificare i post in cui l'utente è stato taggato.
-     - Analizzarne le performance per scoprire potenziali collaborazioni o contenuti di successo.
+   - **Functionality**:
+     - Identify posts where the user is tagged.
+     - Analyze their performance to discover potential collaborations or successful content.
 
 ---
 
-## **Requisiti Non Funzionali**
-1. **Usabilità**:
-   - L'interfaccia backend deve essere chiara e documentata per integrazioni future.
-   
+## **Non-Functional Requirements**
+1. **Usability**:
+   - The backend interface must be clear and well-documented for future integrations.
+
 2. **Performance**:
-   - L'app deve essere in grado di elaborare una richiesta in meno di 2 secondi (limite API).
+   - The app must process a request in under 2 seconds (API limit).
 
-3. **Scalabilità**:
-   - Supportare richieste multiple senza sovraccaricare i limiti delle InstagAPI.
+3. **Scalability**:
+   - Support multiple requests without exceeding InstagAPI limits.
 
-4. **Affidabilità**:
-   - Gestire errori API (es. limiti di richieste) con messaggi chiari e fallback.
-
----
-
-## **Limitazioni**
-1. L'app può analizzare solo profili pubblici o per cui l'utente ha fornito esplicito consenso.
-2. **Limiti API InstagAPI**:
-   - Massimo 50 richieste nella versione gratuita.
-   - Accesso limitato ai dati hashtag di utenti non collegati.
-3. **Limiti API Gemini**:
-   - Dipendenza da analisi predittiva e multimodale soggetta a limiti di utilizzo giornaliero.
-4. Dati geografici e musicali potrebbero non essere completi in alcune regioni.
+4. **Reliability**:
+   - Handle API errors (e.g., request limits) with clear messages and fallback options.
 
 ---
 
-## **Tecnologie Utilizzate**
-- **Backend**: Python con FastAPI per velocità di sviluppo e performance.
-- **API**: 
-  - **InstagAPI**: Per raccogliere dati di profilo, post, hashtag e posizione.
-  - **Gemini AI API**: Per analisi avanzate e generazione di suggerimenti.
-- **Database**: SQLite per semplicità nella gestione dei dati durante l'hackathon.
+## **Limitations**
+1. The app can only analyze public profiles or those for which the user has explicitly granted consent.
+2. **InstagAPI Limits**:
+   - Maximum of 50 requests in the free version.
+   - Limited access to hashtag data for unlinked users.
+3. **Gemini API Limits**:
+   - Dependency on predictive and multimodal analysis subject to daily usage limits.
+4. Geographic and music data may be incomplete in certain regions.
 
 ---
 
-## **Roadmap Hackathon**
-
-### **Fase 1: Integrazione API (8 novembre, sera)**
-**Obiettivo**: Collegare l'applicazione alle API di Instagram e Gemini per raccogliere dati e generare suggerimenti.  
-- **Attività**:
-  1. Configurazione dell'autenticazione con InstagAPI.
-  2. Collegamento con l'API di Gemini per analisi predittive.
-  3. Creazione di endpoint base in `src/main.py` per:
-     - Statistiche sui post (es. endpoint "Ottieni dettagli del post di Instagram").
-     - Suggerimenti personalizzati (es. endpoint "Ottieni hashtag di ricerca Instagram").
-
-**Output atteso**:
-- Endpoint funzionanti per raccolta dati e suggerimenti.
-- Codice testato con mock API e `tests/test_main.py`.
+## **Technologies Used**
+- **Backend**: Python with FastAPI for development speed and performance.
+- **APIs**:
+  - **InstagAPI**: For gathering profile, post, hashtag, and location data.
+  - **Gemini AI API**: For advanced analysis and suggestion generation.
+- **Database**: SQLite for simplicity in data management during the hackathon.
 
 ---
 
-### **Fase 2: Logica di Analisi e Suggerimenti (9 novembre, mattina)**
-**Obiettivo**: Implementare la logica per analizzare i dati e generare suggerimenti utili.  
-- **Attività**:
-  1. Creare funzioni di analisi in `src/main.py`:
-     - Analisi delle interazioni su post e storie.
-     - Identificazione dei migliori orari di pubblicazione.
-     - Generazione di descrizioni personalizzate.
-  2. Testare le funzioni con casi reali utilizzando API live e script di test.
+## **Hackathon Roadmap**
 
-**Output atteso**:
-- Funzionalità complete per analisi e suggerimenti.
-- Risultati mostrati in formato JSON (pronto per test e integrazioni future).
+### **Phase 1: API Integration (November 8, evening)**
+**Objective**: Connect the application to Instagram and Gemini APIs to collect data and generate suggestions.  
+- **Activities**:
+  1. Configure authentication with InstagAPI.
+  2. Connect with Gemini API for predictive analysis.
+  3. Create basic endpoints in `src/main.py` for:
+     - Post statistics (e.g., endpoint "Get Instagram Post Details").
+     - Personalized suggestions (e.g., endpoint "Get Instagram Search Hashtags").
 
----
-
-### **Fase 3: Testing e Documentazione (9 novembre, pomeriggio)**
-**Obiettivo**: Assicurarsi che tutte le funzionalità siano testate e ben documentate.  
-- **Attività**:
-  1. Eseguire test unitari e di integrazione con `pytest`.
-  2. Documentare gli endpoint API in:
-     - `README.md`: Istruzioni per utilizzare il progetto.
-     - `SETUP.md`: Guida alla configurazione delle API.
-  3. Pulire il codice e aggiornare `requirements.txt`.
-
-**Output atteso**:
-- Test completi e documentazione chiara.
-- Codice pronto per review e consegna.
+**Expected Output**:
+- Functional endpoints for data collection and suggestions.
+- Tested code with mock APIs and `tests/test_main.py`.
 
 ---
 
-### **Fase 4: Debug Finale e Preparazione Demo (10 novembre, mattina)**
-**Obiettivo**: Risolvere bug e preparare una demo funzionante.  
-- **Attività**:
-  1. Eseguire test end-to-end con casi reali.
-  2. Creare uno script demo per mostrare:
-     - Raccolta di statistiche.
-     - Generazione di suggerimenti personalizzati.
-  3. Pulire il repository e preparare la consegna.
+### **Phase 2: Analysis Logic and Suggestions (November 9, morning)**
+**Objective**: Implement the logic to analyze data and generate useful suggestions.  
+- **Activities**:
+  1. Create analysis functions in `src/main.py`:
+     - Interaction analysis for posts and stories.
+     - Identification of optimal posting times.
+     - Generation of personalized captions.
+  2. Test functions with real cases using live APIs and test scripts.
 
-**Output atteso**:
-- Progetto funzionante pronto per la valutazione.
-- Repository organizzato e documentato.
+**Expected Output**:
+- Complete functionalities for analysis and suggestions.
+- Results displayed in JSON format (ready for testing and future integrations).
+
+---
+
+### **Phase 3: Testing and Documentation (November 9, afternoon)**
+**Objective**: Ensure all features are tested and well-documented.  
+- **Activities**:
+  1. Run unit and integration tests with `pytest`.
+  2. Document API endpoints in:
+     - `README.md`: Instructions for using the project.
+     - `SETUP.md`: Guide for configuring the APIs.
+  3. Clean the code and update `requirements.txt`.
+
+**Expected Output**:
+- Complete tests and clear documentation.
+- Code ready for review and delivery.
+
+---
+
+### **Phase 4: Final Debugging and Demo Preparation (November 10, morning)**
+**Objective**: Fix bugs and prepare a functional demo.  
+- **Activities**:
+  1. Run end-to-end tests with real cases.
+  2. Create a demo script to showcase:
+     - Data collection statistics.
+     - Generation of personalized suggestions.
+  3. Clean up the repository and prepare for submission.
+
+**Expected Output**:
+- Fully functional project ready for evaluation.
+- Organized and documented repository.
 
 ---
